@@ -27,7 +27,8 @@ jobs:
 
       - name: Generate Snake animation
         run: |
-          git clone https://github.com/Platane/snk-makefile.git
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Platane/snk-makefile.git
+
           cd snk-makefile
           make generate user=Diewaay
         env:
