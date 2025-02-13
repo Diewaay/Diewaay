@@ -27,9 +27,9 @@ jobs:
 
       - name: Generate Snake animation
         run: |
-          git clone https://github.com/Platane/snk.git
-          cd snk
-          python3 main.py --user Diewaay --filename ../github-contribution-grid-snake.svg
+          git clone https://github.com/Platane/snk-makefile.git
+          cd snk-makefile
+          make generate user=Diewaay
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
