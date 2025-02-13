@@ -1,0 +1,40 @@
+name: Generate Snake
+
+on:
+  schedule: # Menjalankan workflow pada waktu yang dijadwalkan
+    - cron: "0 0 * * *" # Setiap hari pada pukul 00:00 UTC
+  workflow_dispatch: # Memungkinkan menjalankan workflow secara manual
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install matplotlib numpy
+
+      - name: Generate Snake animation
+        run: |
+          git clone https://github.com/Platane/snk.git
+          cd snk
+          python3 main.py --user Diewaay --filename ../github-contribution-grid-snake.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push generated snake
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
