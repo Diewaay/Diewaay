@@ -1,1 +1,1 @@
-![Animasi ular]( https://raw.githubusercontent.com/{username}/{Diewaay}/output/github-contribution-grid-snake-dark.svg )
+![Snake is Ular](https://raw.githubusercontent.com/Diewaay/Diewaay/output/github-contribution-grid-snake-dark.svg)
