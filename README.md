@@ -1,1 +1,5 @@
-![Animasi ular](https://raw.githubusercontent.com/Diewaay/output/github-contribution-grid-snake-dark.svg)
+<!-- Snake -->
+<div align="center">
+    
+  ![snake gif](https://github.com/Diewaay/Diewaay/blob/output/github-snake-dark.svg)
+</div>
