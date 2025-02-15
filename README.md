@@ -52,6 +52,6 @@ while alive:
 <!-- Snake -->
 <div align="center">
    
-  ![snake gif](https://github.com/Diewaay/Diewaay/blob/output/github-snake.svg)
+  ![snake gif](https://github.com/Muhammad-Hilmann-f/Muhammad-Hilmann-f/blob/output/github-snake.svg)
 </div>
 
